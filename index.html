@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyCast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="weather-container">
+      <!-- 🌙 Dark Mode -->
+      <button id="toggleTheme">🌙 Dark Mode</button>
+
+      <h1>🌤️ Weather App</h1>
+
+      <!-- 🔍 Search + 🎙️ Voice + 📍 GPS -->
+      <form id="searchForm">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name"
+          required
+        />
+        <button type="submit">Search</button>
+        <button type="button" id="voiceSearch">🎙️</button>
+        <button type="button" id="gpsSearch">📍</button>
+      </form>
+
+      <!-- 🌡️ Toggle °C / °F -->
+      <button id="toggleUnit">Show in °F</button>
+
+      <!-- ⏳ Loader -->
+      <div id="loader" class="hidden">Loading...</div>
+
+      <!-- 📋 Weather Content -->
+      <div id="weatherContent" class="hidden">
+        <h2>Weather in <span id="city">City</span></h2>
+        <div class="weather">
+          <img id="icon" alt="weather icon" />
+          <div class="details">
+            <p><strong>Condition:</strong> <span id="condition"></span></p>
+            <p><strong>Temperature:</strong> <span id="temp"></span></p>
+            <p><strong>Feels Like:</strong> <span id="feelslike"></span></p>
+            <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+            <p><strong>Wind:</strong> <span id="wind"></span> kph</p>
+            <p><strong>UV:</strong> <span id="uv"></span></p>
+            <p><strong>PM2.5:</strong> <span id="pm"></span> µg/m³</p>
+            <p><strong>Local Time:</strong> <span id="time"></span></p>
+          </div>
+        </div>
+
+        <!-- 📅 3-Day Forecast -->
+        <h3>Next 3 Days Forecast</h3>
+        <div id="forecast" class="forecast-grid"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
